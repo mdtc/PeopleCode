@@ -1,0 +1,73 @@
+/* Basic concepts and Syntax of People Code  */
+
+
+/*   Variables  */
+/*   Variables are declared using "&" ampersand symbol  */ 
+
+&variable = "New variable";
+
+
+/*   Data Types  */
+/*   PeopleCode supports differnt Data types including string, numeric, date, boolean, arrays, records and objects */ 
+&string_variable = "Hello, World!";
+&numeric_variable = 100;
+&date_variable = DateCreate(2022, 12, 31);
+&boolean_variable = True;
+&array_variable[1] = "Hello";
+&array_variable[2] = "World";
+&record = CreateRecord(Record.EMPLOYEE);
+&object = CreateObject("MyClass");
+
+
+/*Control structures: PeopleCode supports several control structures, such as if/else, while, and for */ 
+/*     IF STATEMENT    */
+
+If &x > &y Then
+    /* Do something */
+Else
+    /* Do something else */
+End-If;
+
+
+/*     WHILE LOOP    */
+While &x < 10
+    /* Do something */
+    &x = &x + 1;
+End-While;
+
+
+/*     FOR LOOP    */
+For &i = 1 To 10
+    /* Do something */
+End-For;
+
+
+/*Functions syntax*/ 
+
+Function MyFirstFunction(input1 as string) returns string;
+  /* code */
+  return "Hello, " | input1 | "!";
+End-Function;
+
+
+/* Some built-in Functions*/ 
+
+MessageBox(0, "Hello, World!");
+&date_variable = DateCreate(2022, 12, 31);
+&record = CreateRecord(Record.EMPLOYEE);
+
+
+/* concat strings and variables with "|" pipe symbol  */
+
+&text1 = "Hello";
+&text2 = "World";
+
+&result = &text1 | &text2;  
+
+
+
+/* Create a new class */
+
+Class MyClass;
+  /* Class code */
+End-Class;
